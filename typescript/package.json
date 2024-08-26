@@ -1,0 +1,60 @@
+{
+    "name": "acc-service-sdk",
+    "version": "1.0.0",
+    "description": "The TypeScript SDK Library for ACC Partners",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "prepare": "rimraf ./dist && tsc",
+        "test": "rimraf ./dist && tsc && mocha -r ts-node/register tests/**/**/*.test.ts",
+        "build": "rimraf ./dist && tsc",
+        "lint": "tslint --config tslint.json \"{src,tests}/**/*.ts\"",
+        "lint-fix": "tslint --fix --config tslint.json \"{src,tests}/**/*.ts\"",
+        "formatting:check": "prettier '**/*.{json,sol,ts,js}' -c",
+        "formatting:write": "prettier '**/*.{json,sol,ts,js}' --write",
+        "test:Client": "rimraf ./dist && tsc && mocha -r ts-node/register tests/Client.test.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acc-coin/acc-service-sdk.git"
+    },
+    "keywords": [
+        "SDK",
+        "TypeScript"
+    ],
+    "author": "BOSAGORA Foundation",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/acc-coin/acc-service-sdk/issues"
+    },
+    "homepage": "https://github.com/acc-coin/acc-service-sdk/",
+    "dependencies": {
+        "@ethersproject/abi": "^5.7.0",
+        "@ethersproject/abstract-signer": "^5.7.0",
+        "@ethersproject/bignumber": "^5.7.0",
+        "@ethersproject/bytes": "^5.7.0",
+        "@ethersproject/constants": "^5.7.0",
+        "@ethersproject/experimental": "^5.7.0",
+        "@ethersproject/keccak256": "^5.7.0",
+        "@ethersproject/wallet": "^5.7.0",
+        "axios": "^1.7.3",
+        "google-libphonenumber": "^3.2.33",
+        "urijs": "^1.19.7"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.3.5",
+        "@types/google-libphonenumber": "^7.4.30",
+        "@types/mocha": "^10.0.0",
+        "@types/node": "^12.20.43",
+        "@types/urijs": "^1.19.12",
+        "assert": "^2.0.0",
+        "chai": "^4.3.7",
+        "mocha": "10.1.0",
+        "prettier": "^2.5.1",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.5.0",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.5.5"
+    }
+}
